@@ -7,17 +7,14 @@
     <script>
         // Lấy URL đích từ query string (VD: ?url=http://example.com)
         const params = new URLSearchParams(window.location.search);
-        const targetURL = params.get("url");
+        let targetURL = params.get("url") || "http://127.0.0.1:745/flag.txt";
 
-        // Kiểm tra nếu có URL thì chuyển hướng
-        if (targetURL) {
-            window.location.href = targetURL;
-        } else {
-            document.write("Thiếu tham số 'url'");
-        }
+        // Chuyển hướng đến URL đích
+        window.location.href = targetURL;
     </script>
 </head>
 <body>
     <p>Đang chuyển hướng...</p>
 </body>
 </html>
+
