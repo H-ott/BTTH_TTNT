@@ -7,7 +7,7 @@
     <script>
         // Lấy URL đích từ query string (VD: ?url=http://example.com)
         const params = new URLSearchParams(window.location.search);
-        let targetURL = params.get("url") || "http://127.0.0.1:1337/flag.txt";
+        let targetURL = params.get("url") || "http://localhost:745/flag.txt";
 
         // Chuyển hướng đến URL đích
         window.location.href = targetURL;
