@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/redirect")
 def open_redirect():
-    target = request.args.get("url")  # Lấy URL mục tiêu từ tham số `to`
+    target = request.args.get("url")  # Lấy URL mục tiêu từ tham số `url`
     print(target)
     if not target:
         return "khong co ?to=URL", 400
